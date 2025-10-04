@@ -1,4 +1,5 @@
-# scripts/get_data.py
+# get_data.py
+# Author: Gabriel Caballero
 import os, requests
 URL="https://raw.githubusercontent.com/karpathy/makemore/master/names.txt"
 os.makedirs("data", exist_ok=True)
