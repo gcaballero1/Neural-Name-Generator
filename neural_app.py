@@ -1,4 +1,5 @@
 # src/neural_app.py
+# Author: Gabriel Caballero
 from dash import Dash, html, callback, Output, Input
 import torch, os, torch.nn.functional as F
 
