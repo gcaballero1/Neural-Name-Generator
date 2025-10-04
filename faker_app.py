@@ -1,3 +1,4 @@
+# Author: Gabriel Caballero
 from dash import Dash, html, callback, Output, Input
 from faker import Faker
 
