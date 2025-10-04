@@ -3,6 +3,24 @@ A character-level neural network in PyTorch that learns from real names and gene
 
 ![image alt](https://github.com/gcaballero1/Neural-Name-Generator/blob/main/screenshot.png?raw=true)
 
+## How It Works
+This model is a character-level neural language model trained on thousands of real names. It Converts names into input/output pairs using a fixed context window. Next, it runs gradient descent for thousands of iterations to adjust the parameters. Then, saves the learned parameters to models/params.pt for later use.
+
+**Architecture:**
+   - Embedding layer (C): learns vector representations for each character
+   - Hidden layer (W1, b1): combines character embeddings into context-aware features
+   - Output layer (W2, b2): predicts the probability distribution for the next character
+   - Training: uses cross-entropy loss to optimize the network parameters
+   - The model learns character sequences and produces plausible new names that resemble the training data but are not simple copies
+
+**User Interface:**
+The project includes two interactive web apps built with [Dash](https://dash.plotly.com/):
+
+- *Faker App:* Uses the [Faker](https://faker.readthedocs.io/en/master/) library to instantly generate realistic random names. A button click refreshes the output, showing 5 new names each time.  
+- *Neural App:* Loads the trained PyTorch model and provides a button-driven interface that samples names from the learned probability distribution. This demonstrates how deep learning models can be wrapped in a user-friendly UI.  
+
+Both apps run locally in your browser and display results in real time, making it easy to explore both rule-based and neural-generated names.
+
 ## Dependencies
 1. Python 3.8 or higher
 2. pip
