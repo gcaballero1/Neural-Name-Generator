@@ -1,5 +1,6 @@
-# src/train_from_scratch.py
+# train_from_scratch.py
 # Simplified training script for neural name generator
+# Author: Gabriel Caballero
 import argparse, os, torch, torch.nn.functional as F
 
 def build_dataset(words, stoi, block_size):
